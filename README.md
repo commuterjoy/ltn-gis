@@ -49,7 +49,12 @@ If you are familiar with Ealing you'll spot that the map shows more than just pu
 Open the [attribute table](https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#introducing-the-attribute-table-interface) of the clipped layer of Ealing roads and use the `Select features using an expression` option, then paste a list of the [map features](https://wiki.openstreetmap.org/wiki/Key:highway#Roads) we want to analyse.
 
 ```
-(((((("fclass" ILIKE '%primary%')) OR (("fclass" ILIKE '%secondary%'))) OR (("fclass" ILIKE '%tertiary%'))) OR (("fclass" ILIKE '%residential%'))) OR (("fclass" ILIKE '%unclassified%'))) OR (("fclass" ILIKE '%trunk%'))
+(((((("fclass" ILIKE '%primary%'))
+ OR (("fclass" ILIKE '%secondary%')))
+ OR (("fclass" ILIKE '%tertiary%')))
+ OR (("fclass" ILIKE '%residential%')))
+ OR (("fclass" ILIKE '%unclassified%')))
+ OR (("fclass" ILIKE '%trunk%'))
 ```
 
 And as we did above, copy and paste the selected features with `Edit -> Copy Features` and then, `Edit -> Paste Features As -> Temporary Scratch Layer`, and give it a name like `Ealing Roads`.
@@ -58,6 +63,22 @@ Here's a map of just the roads,
 
 <img src="images/10-just-the-roads.png"/>
 
-Or with the roads and paths layers turned on,
+Or with the roads (yellow) and paths (green) layers turned on, which I think is quite attractive.
 
 <img src="images/11-roads-and-paths.png"/>
+
+# Calculating the road length in an area
+
+Next we wamt to calculate the road length in km. There's a [great tutorial on qgistutorials.com](https://www.qgistutorials.com/en/docs/calculating_line_lengths.html) that I'll summarise here.
+
+Find the `Field Calculator` dialogue and fill it out like so, afterwhich a new field called `length_km` will be created on the attribute table, i.e. QGIS will calculate the length of every road on the map for you.
+
+<img src="images/12-virtual-field-km.png"/>
+
+Using the in-built stats, `Vector -> Analysis Tools -> Basic Statistics for Fields` we can ask it to sum all the roads lengths on the current layer,
+
+<img src="images/13-district-stats-query.png"/>
+
+And then look at the `SUM` value in the output, which shows `613km` of roads in Ealing.
+
+<img src="images/13-district-stats.png"/>
