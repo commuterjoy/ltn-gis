@@ -79,15 +79,21 @@ Using the in-built stats, `Vector -> Analysis Tools -> Basic Statistics for Fiel
 
 <img src="images/13-district-stats-query.png"/>
 
-And then look at the `SUM` value in the output, which shows `613km` of roads in Ealing.
+And then look at the `SUM` value in the output, which shows `613km` of roads in Ealing. This is about 26km off the [official estimate](https://www.gov.uk/government/statistical-data-sets/road-length-statistics-rdl) from the Department of Transport. 
 
 <img src="images/13-district-stats.png"/>
 
 ## Arbitrary polygons
 
+To calculate the road length within any area we can do, `Layer -> Create Layer -> New Temporary Scratch Layer`, giving it a name.
+
 <img src="images/14-scratch-polygon.png"/>
 
+And then using the polygon drawing tool to create arbitrary shapes over the top of the road network layer.
+
 <img src="images/17-polygon.png"/>
+
+You can then repeat the steps above to `clip` the selected roads, add the `length_km` to the attribute table, and calculate the total length of roads within the shape you have drawn.
 
 <img src="images/18-polygon.png"/>
 
