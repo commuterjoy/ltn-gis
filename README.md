@@ -10,7 +10,7 @@ And a [map of the electoral ward boundaries](https://data.london.gov.uk/dataset/
 
 ## All the roads
 
-Extract `greater-london-latest-free.shp.zip` and you'll find an [ESRI Shapefile](https://en.wikipedia.org/wiki/Shapefile) called `gis_osm_roads_free_1.shp`. Pop that open in QGIS.
+Extract `greater-london-latest-free.shp.zip` and you'll find an [ESRI Shapefile](https://en.wikipedia.org/wiki/Shapefile) called `gis_osm_roads_free_1.shp`. Pop that open in QGIS. You can see the Thames winding it's way through the middle of London or the two Heathrow runways on the West of the map.
 
 <img src="images/1-all-the-roads.png">
 
@@ -22,7 +22,7 @@ Secondly, extract `London-wards-2018.zip` and grab `London_Ward.shp` and open th
 
 ## All the roads in a single borough
 
-I just needed Ealing roads so we need to chuck the rest of London away, so I did that in three steps.
+I just needed Ealing roads so we need to chuck the rest of London away, so I did that in a few steps.
 
 Open the [attribute table](https://docs.qgis.org/2.18/en/docs/user_manual/working_with_vector/attribute_table.html#introducing-the-attribute-table-interface) of the London wards layer. 
 
@@ -42,7 +42,7 @@ You should end up with something like this, which shows all the roads (and more)
 
 <img src="images/7-roads-in-a-district.png" />
 
-# Just the roads please
+## Just the roads please
 
 If you are familiar with Ealing you'll spot that the map shows more than just public highways, there's every conceivable pathway and track plotted on the map. Given I'm just interested in roads we need to filter them out.
 
@@ -67,7 +67,7 @@ Or with the roads (yellow) and paths (green) layers turned on, which I think is 
 
 <img src="images/11-roads-and-paths.png"/>
 
-# Calculating the road length in an area
+## Calculating the total road length of an area
 
 Next we wamt to calculate the road length in km. There's a [great tutorial on qgistutorials.com](https://www.qgistutorials.com/en/docs/calculating_line_lengths.html) that I'll summarise here.
 
@@ -82,3 +82,14 @@ Using the in-built stats, `Vector -> Analysis Tools -> Basic Statistics for Fiel
 And then look at the `SUM` value in the output, which shows `613km` of roads in Ealing.
 
 <img src="images/13-district-stats.png"/>
+
+## Arbitrary polygons
+
+<img src="images/14-scratch-polygon.png"/>
+
+<img src="images/17-polygon.png"/>
+
+<img src="images/18-polygon.png"/>
+
+
+
