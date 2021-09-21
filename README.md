@@ -1,4 +1,8 @@
-How much of Ealing road network was converted to low-traffic neighbourhoods during the pandemic?
+Q. How much of Ealing road network was converted to low-traffic neighbourhoods during the pandemic?
+
+A. About 54km, or 9% of the public road infrastruction in the borough.
+
+Here's a few notes on using QGIS do work this out.
 
 # Prep
 
