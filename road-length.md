@@ -14,7 +14,7 @@ And a [map of the electoral ward boundaries](https://data.london.gov.uk/dataset/
 
 ## All the roads
 
-Extract `greater-london-latest-free.shp.zip` and you'll find an [ESRI Shapefile](https://en.wikipedia.org/wiki/Shapefile) called `gis_osm_roads_free_1.shp`. Pop that open in QGIS. You can see the Thames winding it's way through the middle of London or the two Heathrow runways on the West of the map.
+Extract `greater-london-latest-free.shp.zip` and you'll find an [ESRI Shapefile](https://en.wikipedia.org/wiki/Shapefile) called `gis_osm_roads_free_1.shp`. Pop that open in QGIS. You can see the Thames winding it's way through the middle of London and also the two Heathrow runways on the West of the map.
 
 <img src="images/1-all-the-roads.png">
 
