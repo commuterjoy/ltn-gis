@@ -75,7 +75,7 @@ Or with the roads (yellow) and paths (green) layers turned on, which I think is 
 
 Next we wamt to calculate the road length in km. There's a [great tutorial on qgistutorials.com](https://www.qgistutorials.com/en/docs/calculating_line_lengths.html) that I'll summarise here.
 
-Find the `Field Calculator` dialogue and fill it out like so, afterwhich a new field called `length_km` will be created on the attribute table, i.e. QGIS will calculate the length of every road on the map for you.
+Find the `[Field Calculator](https://docs.qgis.org/2.8/en/docs/user_manual/working_with_vector/field_calculator.html)` dialogue and fill it out like so, afterwhich a new field called `length_km` will be created on the attribute table, i.e. QGIS will calculate the length of every road on the map for you.
 
 <img src="images/12-virtual-field-km.png"/>
 
